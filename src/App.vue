@@ -1,4 +1,5 @@
 <script >
+import axios from "axios";
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import { store } from './components/store';
@@ -9,11 +10,30 @@ export default{
       store,
     }
   },
+  methods:{
+    getCharacter(){
+      axios
+      .get(store.apiUrl)
+      .then(res =>{
+        store.characterList = res.data.results;
+      })
+      .catch(err =>{
+        console.log("Errori",err);
+      }
+      )
+     
+    }
+   
+  },
   components: {
     AppHeader,
     AppMain,
     
-  }
+    
+  },
+  mounted() {
+        this.getCharacter();
+      }
 }
 
 </script>
@@ -21,7 +41,7 @@ export default{
 <template>
   
 <div id="container">
-  <AppHeader  msg="Rick and Morty"/>
+  <AppHeader  msg="Rick and Morty API"/>
   <AppMain/>
 </div>
 </template>
@@ -32,8 +52,8 @@ export default{
 @use'./components/styles/partials/variables.scss' as *;
 #container{
   background-color: #2e3a46;
-  width: 100%;
- height: 500px;
+  width:100%;
+ 
   margin: 50px 0px auto;
 
 }

@@ -9,12 +9,22 @@ body{
 
     background-color:  #222222;
     font-family: $font;
+    color: $main-color;
     h1{
-        color: $main-color;
-        text-align: center;
+        
+        align-self: center;
+      
     }
     img{
-        max-width: 100%;
+        max-width: 215px;
+        border-radius:50% ;
+        text-align: center;
+    }
+    main{
+       
+        width: 80%;
+        margin:  auto;
+
     }
 
 }

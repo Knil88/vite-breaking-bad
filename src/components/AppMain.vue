@@ -1,11 +1,86 @@
-<script setup>
+<script >
 
+import SingleCharacter from "./SingleCharacter.vue"
+
+import {store} from './store'
+   export default{
+        name:"AppMain",
+        components:{
+            SingleCharacter,
+        },
+        data() {
+            return {
+                store,
+            }
+        },
+   }
 </script>
 
 <template>
-  
+  <main>
+    <section>
+        <select name="Category" id="category">
+            <option value="">
+                Select Category
+            </option>
+            <option value="">
+                Select Category
+            </option>
+            <option value="">
+                Select Category
+            </option>
+            <option value="">
+                Select Category
+            </option>
+        </select>
+    </section>
+        <section id="card-container">
+          
+            
+           <div id="count">
+               WE HAVE FOUND  {{store.apiUrl.length}} CHARACTERS 
+           </div>
+               
+            <div class="big-card" v-for="character in store.characterList" 
+            :key="character.id">
+            <SingleCharacter :info="character"/>
+            </div>
+      
+        </section>
+  </main>
 </template>
 
 <style lang="scss" scoped>
+#category{
+    margin: 8px auto;
+    padding: 5px;
+    font-size: 13px;
+}
+    #card-container{
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        margin: auto;
+        width:100%;
+        background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(175,180,28,1) 24%, rgba(148,198,123,0.9261904590937937) 69%, rgba(0,212,255,1) 100%);
+        
 
+        .big-card{
+            text-align: center;
+            margin: 13px;
+          
+          
+            
+        }
+
+    }
+    #count{
+        background-color: aliceblue;
+        width: 95%;
+        padding: 10px;
+        color: blue;
+        margin: 10px;
+        font-weight: bolder;
+    }
 </style>
