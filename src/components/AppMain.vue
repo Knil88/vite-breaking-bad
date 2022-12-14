@@ -38,7 +38,7 @@ import {store} from './store'
           
             
            <div id="count">
-               WE HAVE FOUND  {{store.apiUrl.length}} CHARACTERS 
+               WE HAVE FOUND  {{store.characterList.length}} CHARACTERS 
            </div>
                
             <div class="big-card" v-for="character in store.characterList" 
