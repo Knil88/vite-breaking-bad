@@ -1,8 +1,14 @@
 <script >
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-
+import { store } from './components/store';
 export default{
+ name:"App",
+  data() {
+    return {
+      store,
+    }
+  },
   components: {
     AppHeader,
     AppMain,
@@ -15,7 +21,7 @@ export default{
 <template>
   
 <div id="container">
-  <AppHeader/>
+  <AppHeader  msg="Rick and Morty"/>
   <AppMain/>
 </div>
 </template>
