@@ -1,6 +1,6 @@
 <script >
     export default{
-        props : ["msg"],
+        props: ["msg"],
         data() {
             return {
                 image:"https://vectorlogo4u.com/wp-content/uploads/2020/11/Rick-and-Morty-Logo-Vector-01.png",

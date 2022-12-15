@@ -17,7 +17,7 @@ import {store} from './store'
 <template>
   
     <section>
-        <select name="Status" id="status" @click="$emit('search')" v-model="store.searchText"  placeholder="Select Category">
+        <select name="Status" id="status" @change="$emit('search')" v-model="store.searchText"  placeholder="Select Category">
            
             <option value="alive" >
                 Alive

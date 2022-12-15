@@ -1,3 +1,5 @@
+<!-- Il file SingleCharacter fa in modo che dandogli una props con un nome scelto da noi mi richiami la characterList -->
+
 <script >
    export default{
         name:"SingleCharacter",
