@@ -17,6 +17,7 @@ export default{
     let myUrl = store.apiUrl
 
     if(store.searchText == "alive"){
+     store.apiStatus = "?status=alive"
       myUrl += `?${store.apiStatus} = ${store.searchText}`
 }
       axios
