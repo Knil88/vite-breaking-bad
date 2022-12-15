@@ -1,7 +1,8 @@
 <script >
 import axios from "axios";
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import CharacterList from './components/CharacterList.vue';
+import AppSearch from './components/AppSearch.vue';
 import { store } from './components/store';
 export default{
  name:"App",
@@ -12,8 +13,16 @@ export default{
   },
   methods:{
     getCharacter(){
+    
+    let myUrl = store.apiUrl
+
+    if(store.searchText == "alive"){
+      myUrl += `?${store.apiStatus} = ${store.searchText}`
+}
       axios
-      .get(store.apiUrl)
+      
+      .get(myUrl)
+      
       .then(res =>{
         store.characterList = res.data.results;
       })
@@ -27,7 +36,8 @@ export default{
   },
   components: {
     AppHeader,
-    AppMain,
+    CharacterList ,
+    AppSearch,
     
     
   },
@@ -42,7 +52,11 @@ export default{
   
 <div id="container">
   <AppHeader  msg="Rick and Morty API"/>
-  <AppMain/>
+  <main>
+    <AppSearch/>
+    <CharacterList @search=" getCharacter" />
+  </main>
+ 
 </div>
 </template>
 

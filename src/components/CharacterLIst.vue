@@ -4,7 +4,7 @@ import SingleCharacter from "./SingleCharacter.vue"
 
 import {store} from './store'
    export default{
-        name:"AppMain",
+        name:"CharacterList",
         components:{
             SingleCharacter,
         },
@@ -17,28 +17,13 @@ import {store} from './store'
 </script>
 
 <template>
-  <main>
-    <section>
-        <select name="Category" id="category">
-            <option value="">
-                Select Category
-            </option>
-            <option value="">
-                Select Category
-            </option>
-            <option value="">
-                Select Category
-            </option>
-            <option value="">
-                Select Category
-            </option>
-        </select>
-    </section>
+  
+   
         <section id="card-container">
           
             
            <div id="count">
-               WE HAVE FOUND  {{store.characterList.length}} CHARACTERS 
+              <p> WE HAVE FOUND  {{store.characterList.length}} CHARACTERS </p>
            </div>
                
             <div class="big-card" v-for="character in store.characterList" 
@@ -47,11 +32,11 @@ import {store} from './store'
             </div>
       
         </section>
-  </main>
+ 
 </template>
 
 <style lang="scss" scoped>
-#category{
+#status{
     margin: 8px auto;
     padding: 5px;
     font-size: 13px;

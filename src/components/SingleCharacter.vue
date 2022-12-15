@@ -13,14 +13,16 @@
                 
                 <div class="big-card">
                     <img :src="info.image" alt="">
-                    <div>
-                        <h4>{{info.name}}</h4>
-                    </div>
-                    <div id="">
-                        {{info.species}}
-                    </div>
-                    <div>
-                        {{info.status}}
+                    <div id="info-container">
+                        <div>
+                            <h4>{{info.name}}</h4>
+                        </div>
+                        <div id="">
+                            {{info.species}}
+                        </div>
+                        <div>
+                            {{info.status}}
+                        </div>
                     </div>
                 </div>
           
@@ -31,11 +33,15 @@
 
 <style lang="scss" scoped>
 div{
-    margin: 5px auto;
+    margin: 5px ;
 }
 #count{
     padding: 5px;
     background-color: aliceblue;
+}
+#info-container{
+    
+        padding-left: 45px;
 }
 
 </style>
