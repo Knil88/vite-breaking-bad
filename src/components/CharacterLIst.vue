@@ -48,8 +48,8 @@ import {store} from './store'
         margin: auto;
         width:100%;
         background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(175,180,28,1) 24%, rgba(148,198,123,0.9261904590937937) 69%, rgba(0,212,255,1) 100%);
-        
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(175,180,28,1) 24%, rgba(148,198,123,0.9261904590937937) 69%, rgba(0,212,255,1) 100%);
+         
 
         .big-card{
             text-align: center;
