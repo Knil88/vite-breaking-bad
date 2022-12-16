@@ -13,7 +13,8 @@
     <main>
       
             <section id="card-container">
-                <!--Nel div con classe big-card ed a seguire agganciamo la props info per estrapolare l'api --!>
+                
+                <!-- Nel div con classe big-card ed a seguire agganciamo la props info per estrapolare l'api  -->
 
 
                 <div class="big-card">
