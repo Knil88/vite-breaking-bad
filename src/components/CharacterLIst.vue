@@ -1,5 +1,7 @@
 <script >
 
+// Importiamo il file SingleCharacter 
+
 import SingleCharacter from "./SingleCharacter.vue"
 
 import {store} from './store'
