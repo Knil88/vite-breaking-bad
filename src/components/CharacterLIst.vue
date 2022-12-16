@@ -25,11 +25,17 @@ import {store} from './store'
           
             
            <div id="count">
+
+            <!-- Per avere una visualizzazione dinamica del conteggio dei character mettiamo la length di store.characterList -->
+
               <p> WE HAVE FOUND  {{store.characterList.length}} CHARACTERS </p>
            </div>
-               
+             
+           <!-- Creiamo un ciclo v-for che richiamerà il singolo elemento della characterList -->
+
             <div class="big-card" v-for="character in store.characterList" 
             :key="character.id">
+            
             <SingleCharacter :info="character"/>
             </div>
       
